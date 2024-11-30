@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Task Master</h1>
+        <button onclick="openTaskModal()">Add Task</button>
+    </header>
+
+    <main>
+        <div class="task-board">
+            <section id="todo" class="task-column">
+                <h2>To Do</h2>
+                <div class="task-list" id="todo-list"></div>
+            </section>
+            <section id="in-progress" class="task-column">
+                <h2>In Progress</h2>
+                <div class="task-list" id="in-progress-list"></div>
+            </section>
+            <section id="done" class="task-column">
+                <h2>Done</h2>
+                <div class="task-list" id="done-list"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Task Modal -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeTaskModal()">&times;</button>
+            <h2>Create New Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskTitle" placeholder="Task Title" required>
+                <textarea id="taskDesc" placeholder="Task Description"></textarea>
+                <input type="datetime-local" id="taskDeadline" required>
+                <select id="taskPriority" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Create Task</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

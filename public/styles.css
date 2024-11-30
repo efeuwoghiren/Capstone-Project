@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for contrast */
+    font-family: 'Arial', sans-serif; /* Default font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 1rem; /* Add some padding for smaller screens */
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Apply custom font to h1 */
+    font-size: 3rem; /* Larger text for more emphasis */
+    color: #00bcd4; /* Bright accent color */
+    font-weight: bold; /* Bold for stronger presence */
+    letter-spacing: 2px; /* Slightly increased letter-spacing for a more spacious look */
+    text-transform: uppercase; /* All caps for modern flair */
+    margin-bottom: 1.5rem; /* Reduced bottom margin for a more compact look */
+    
+    /* Adding a subtle gradient for text */
+    background: linear-gradient(135deg, #00bcd4, #8e24aa);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    /* Adding a text shadow for a glowing effect */
+    text-shadow: 0 2px 5px rgba(0, 188, 212, 0.6), 0 4px 10px rgba(0, 188, 212, 0.4);
+
+    /* Smooth transition for any color change */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the h1 */
+h1:hover {
+    text-shadow: 0 0 15px rgba(0, 188, 212, 1), 0 0 30px rgba(0, 188, 212, 0.8); /* Glowing effect on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: #1e1e1e; /* Dark card background */
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem; /* Add space between h1 and form */
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #333; /* Dark input background */
+    border: 1px solid #444; /* Dark border */
+    color: #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #00bcd4; /* Accent color for focus */
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #00bcd4; /* Accent button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0097a7; /* Darker shade for hover effect */
+}
+
+#response {
+    color: #ff5722; /* Error message color */
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Slightly smaller heading on smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    form {
+        padding: 1.5rem; /* Reduced padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Even smaller heading on very small screens */
+        margin-bottom: 1rem;
+    }
+
+    form {
+        max-width: 90%; /* Form width adapts to smaller screens */
+        padding: 1rem;
+    }
+
+    input[type="text"], button {
+        padding: 0.8rem; /* Smaller padding on inputs and buttons */
+    }
+}
